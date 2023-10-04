@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: aquamarine;
+      text-align: center;
+      align-items: center;
+    }
+
+    .name span{
+      color: rgb(184, 194, 194);
+      font-size: 20px;
+      font-family: "battambang";
+      padding: 5px 10px ;
+      background: darkgreen;
+      border-radius: 20px;
+    }
+    .pharagrap span{
+      font-size: 15px;
+      font-family: "battambang";
+      padding: 5px ;
+      background: darkgoldenrod;
+      border-radius: 20px;
+    }
+    .pharagrap_input {
+      text-align: center;
+      color: aqua;
+    }
+    input{
+      font-size: 15px;
+      font-family: "battambang";
+    }
+    .runcode button{
+      padding: 10px 15px;
+      font-size: 15px;
+      border-radius: 10px;
+    }
+    #output{
+      font-family: "battambang","Times New Roman", Times, serif;
+    }
+  </style>
+  <body>
+    <h2 class="name"><span>Ngan kang</span></h2>
+    <p class="pharagrap"><span>សរសេរពាក្យដែលអ្នកចង់បញ្ចេញ</span></p>
+    <p class="pharagrap_input"><input id="varible" type="text" /></p>
+    <p class="pharagrap"><span>បញ្ចូលចំនួនដែលអ្នកចង់បញ្ចេញ់</span></p>
+    <p class="pharagrap_input"><input id="numIterations" type="number" /></p>
+    <br />
+    <p class="runcode"><button onclick="runLoop()">Result</button></p>
+
+    <p id="output"></p>
+
+    <script>
+      function runLoop() {
+        var numIterations = parseInt(
+          document.getElementById("numIterations").value
+        );
+        var resurltotal = document.getElementById("varible").value;
+        let total = resurltotal;
+        var result = "";
+
+        for (var i = 1; i <= numIterations; i++) {
+          result += i + ", " + total + "<br>";
+        }
+
+        document.getElementById("output").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
